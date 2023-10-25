@@ -7,10 +7,17 @@
 //     println!("The result is: {}", result);
 // }
 
-//code
+//variable
+// fn main (){
+//     let x: i32 = 9;
+//     let y: i32 = 5;
+//     assert_eq!(x,y);
+//     println!("success")
+// }
+
+//mut
 fn main (){
-    let x: i32 = 9;
-    let y: i32 = 5;
-    assert_eq!(x,y);
-    println!("success")
+    let mut x:i32 =5;
+    x+=5;
+    println!("x is {}",x);
 }
