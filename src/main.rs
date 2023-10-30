@@ -33,14 +33,22 @@
 //    println!("success")
 // }
 //range
-fn main (){
-   let mut  sum : i32 = 0;
-  for i in -3 .. 5{
-   sum += i;
+// fn main (){
+//    let mut  sum : i32 = 0;
+//   for i in -3 .. 5{//this for loop does not inclued 5
+//    sum += i;
 
 
-  }
-  assert!(sum==4);
-  println!(" the sum is {}",sum);
+//   }
+//   assert!(sum==4);
+//   println!(" the sum is {}",sum);
+
+// }
+
+//make println output 97-122
+fn main(){
+   for c in 'a' ..='z'{
+      println!("{}",c as u8);
+   }
 
 }
