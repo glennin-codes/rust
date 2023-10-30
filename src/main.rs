@@ -28,8 +28,19 @@
 
 // }
 //types necessary for summations
-fn  main (){
-   assert_eq!( 0.1_f32+0.2_f32,0.3_f32);
-   println!("success")
-}
+// fn  main (){
+//    assert_eq!( 0.1_f32+0.2_f32,0.3_f32);
+//    println!("success")
+// }
 //range
+fn main (){
+   let mut  sum : i32 = 0;
+  for i in -3 .. 5{
+   sum += i;
+
+
+  }
+  assert!(sum==4);
+  println!(" the sum is {}",sum);
+
+}
