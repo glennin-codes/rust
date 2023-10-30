@@ -16,8 +16,20 @@
 // }
 
 //mut
-fn main (){
-    let mut x:i32 =5;
-    x+=5;
-    println!("x is {}",x);
+// fn main (){
+//     let mut x:i32 =5;
+//     x+=5;
+//     println!("x is {}",x);
+// }
+//unused variable
+// #[allow(unused_variables)]
+// fn main (){
+//     let x:i32 =5;
+
+// }
+//types necessary for summations
+fn  main (){
+   assert_eq!( 0.1_f32+0.2_f32,0.3_f32);
+   println!("success")
 }
+//range
