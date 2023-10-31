@@ -46,9 +46,44 @@
 // }
 
 //make println output 97-122
-fn main(){
-   for c in 'a' ..='z'{
-      println!("{}",c as u8);
-   }
+// fn main(){
+//    for c in 'a' ..='z'{
+//       println!("{}",c as u8 );
+//    }
 
-}
+// }
+
+//  fn main (){
+//    let x:i32=5;
+//    let y: i32={
+//       let a:i32= 9 * x;
+//       let b:i32 = 10 * x;
+//       a + b
+//    };
+//    println!("{}",y)
+   
+//  }
+//  // unit
+//  fn main (){
+//    // let unit:()=();
+//    // assert_eq!(unit,());
+//    // println!("success");
+//    let v ={          
+//       let mut m:i32=1;
+//         m+=1;
+//         m
+//    };
+//    assert_eq!(v,2_i32);
+//    println!("success")
+
+//  }
+ 
+// fn main (){
+//    let (x,y)=(5,8);
+//    let s=sum(x,y);
+//    println!("sum is {}",s)
+// }
+// fn sum(x:i32,y:i32)-> i32{
+//    x+y
+   
+// }
