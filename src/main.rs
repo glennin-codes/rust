@@ -87,3 +87,11 @@
 //    x+y
    
 // }
+fn main (){
+    let s1=String :: from ("hello");
+    let s3:String="hello world ".to_string();
+    let s2=s1;//after reasinging the string s1 to s2 ,si pointer is copied to the heap ,but its values are droped since they can only be one owner at a time 
+    println!("{}",s2);
+    println!("{}",s3);
+  
+}
