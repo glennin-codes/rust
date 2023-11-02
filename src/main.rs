@@ -87,11 +87,66 @@
 //    x+y
    
 // }
-fn main (){
-    let s1=String :: from ("hello");
-    let s3:String="hello world ".to_string();
-    let s2=s1;//after reasinging the string s1 to s2 ,si pointer is copied to the heap ,but its values are droped since they can only be one owner at a time 
-    println!("{}",s2);
-    println!("{}",s3);
+// fn main (){
+//     let s1=String :: from ("hello");
+//     let s3:String="hello world ".to_string();
+//     let s2=s1;//after reasinging the string s1 to s2 ,si pointer is copied to the heap ,but its values are droped since they can only be one owner at a time 
+//     println!("{}",s2);
+//     println!("{}",s3);
   
+// }
+//  fn main (){
+//     let s1:String="my name is king paul".to_string();
+//  take_owner_ship(s1);
+// //  println!("{}",s1); this code wont work cause s1 onwership was moved to the function take_owner_ship  therefore in this main scope s1 ios droped
+// let x=9+3;
+// println!("answer is {}",copy(x));
+// println!("{}",x);
+
+//  }
+//  fn take_owner_ship(some_strings:String){
+//     println!("this functions takes ownerShip of the variable and prints out the following sting '{}' ",some_strings);
+
+//  }
+//  fn copy( mut x:i32)-> i32{
+//     x += 78*45;
+//     x+5
+
+//  }
+
+// fn main (){
+//     let x: String = String::from("hello,world");
+//     let y: String = x.clone();
+//     println!("{},{}",x,y);
+    
+// }
+// fn main(){
+//     let s1: String =String::from("hello,world hjdbjhvjhsdgyjjas");
+//     let s2: String = take_owner_ship(s1);
+//     println!("{}",s2);
+// }
+// fn take_owner_ship(s:String)-> String{ 
+//     s
+
+// }
+// fn  main (){
+//     let s: Vec<u8> =give_ownership();
+//  println!("{:?}",s);
+// }
+// fn give_ownership()->Vec<u8>{
+//     let s:String = String::from("hellow world");
+//     //convert String to vec
+//     let _s: Vec<u8> =s.into_bytes();
+//    _s
+// }
+fn main (){
+    let s = give_owner_ship();
+    println!("{}",s);
+     
+}
+fn give_owner_ship()-> String{
+    let s:String= String::from("hello world");
+    let _s: &[u8] = s.as_bytes();
+     s
+   
 }
