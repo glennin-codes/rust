@@ -139,14 +139,31 @@
 //     let _s: Vec<u8> =s.into_bytes();
 //    _s
 // }
-fn main (){
-    let s = give_owner_ship();
-    println!("{}",s);
+// fn main (){
+//     let s = give_owner_ship();
+//     println!("{}",s);
      
-}
-fn give_owner_ship()-> String{
-    let s:String= String::from("hello world");
-    let _s: &[u8] = s.as_bytes();
-     s
+// }
+// fn give_owner_ship()-> String{
+//     let s:String= String::from("hello world");
+//     let _s: &[u8] = s.as_bytes();
+//      s
    
+// }
+//  fn main (){
+//     let x: (i32, i32, (), &str)= (1,2,(),"hello world");
+//     let y: (i32, i32, (), &str)=x.clone();
+//     println!("{:?},{:?}",x,y);
+
+//  }
+//mutabilty can be changed when ownership is transfered
+
+
+fn main (){
+   let s1:String=String::from ("hello,");
+ let mut s2:String=s1;
+ s2.push_str("world");
+ s2.push_str(" glen");
+ println!("{}",s2);
+
 }
