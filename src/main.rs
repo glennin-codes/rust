@@ -212,14 +212,24 @@
 //   some_string.push_str(",world")
 
 // }
-//dangling reference
-fn main (){
-  let reference= dingle();
-  println!("{}",reference);
+//dangling function reference 
+// fn main (){
+//   let reference= dangle();
+//   println!("{}",reference);
 
-}
-fn dingle()-> String {
-  let s1: String=String::from("hellow world");
+// }
+// fn dangle()-> &String {
+//   let s1: String=String::from("hellow world");
+//   &s1
+
+// }
+ //function no dangle
+ fn no_dangle()-> String{
+  let s1:String=String::from("hello  world");
   s1
+ }
+fn main (){
+  let reference: String= no_dangle();
+  println!("{}",reference);
 
 }
