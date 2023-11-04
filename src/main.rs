@@ -188,8 +188,17 @@
 //      println!("My name is {},I am {} years old",name,age);
 //      println!("My name is {},I am {} years old",name,person.age);
 // }
+// fn main (){
+//   let t:(String,String)=(String::from("hello"),String::from("world"));
+//   let _s=t.0;
+//   println!("{}",t.1);
+// }
+//Borrowing
 fn main (){
-  let t:(String,String)=(String::from("hello"),String::from("world"));
-  let _s=t.0;
-  println!("{}",t.1);
+  let s1: String="hello".to_string();
+  let length: usize=caluculate_length(&s1);
+  println!("the length of {} is {}",s1,length)
+}
+fn caluculate_length(s:&String)->usize{
+  s.len()
 }
