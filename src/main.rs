@@ -202,13 +202,24 @@
 // fn caluculate_length(s:&String)->usize{
 //   s.len()
 // }
-//mutable reference 
+// //mutable reference 
+// fn main (){
+//   let mut s: String=String::from("hello");
+//   change(  &mut s);
+// println!("{}",s);
+// }
+// fn change(some_string:&mut String)->(){
+//   some_string.push_str(",world")
+
+// }
+//dangling reference
 fn main (){
-  let mut s: String=String::from("hello");
-  change(&mut s);
-println!("{}",s);
+  let reference= dingle();
+  println!("{}",reference);
+
 }
-fn change(some_string:&mut String)->(){
-  some_string.push_str(",world")
+fn dingle()-> String {
+  let s1: String=String::from("hellow world");
+  s1
 
 }
