@@ -38,7 +38,6 @@
 //   for i in -3 .. 5{//this for loop does not inclued 5
 //    sum += i;
 
-
 //   }
 //   assert!(sum==4);
 //   println!(" the sum is {}",sum);
@@ -61,14 +60,14 @@
 //       a + b
 //    };
 //    println!("{}",y)
-   
+
 //  }
 //  // unit
 //  fn main (){
 //    // let unit:()=();
 //    // assert_eq!(unit,());
 //    // println!("success");
-//    let v ={          
+//    let v ={
 //       let mut m:i32=1;
 //         m+=1;
 //         m
@@ -77,7 +76,7 @@
 //    println!("success")
 
 //  }
- 
+
 // fn main (){
 //    let (x,y)=(5,8);
 //    let s=sum(x,y);
@@ -85,15 +84,15 @@
 // }
 // fn sum(x:i32,y:i32)-> i32{
 //    x+y
-   
+
 // }
 // fn main (){
 //     let s1=String :: from ("hello");
 //     let s3:String="hello world ".to_string();
-//     let s2=s1;//after reasinging the string s1 to s2 ,si pointer is copied to the heap ,but its values are droped since they can only be one owner at a time 
+//     let s2=s1;//after reasinging the string s1 to s2 ,si pointer is copied to the heap ,but its values are droped since they can only be one owner at a time
 //     println!("{}",s2);
 //     println!("{}",s3);
-  
+
 // }
 //  fn main (){
 //     let s1:String="my name is king paul".to_string();
@@ -118,14 +117,14 @@
 //     let x: String = String::from("hello,world");
 //     let y: String = x.clone();
 //     println!("{},{}",x,y);
-    
+
 // }
 // fn main(){
 //     let s1: String =String::from("hello,world hjdbjhvjhsdgyjjas");
 //     let s2: String = take_owner_ship(s1);
 //     println!("{}",s2);
 // }
-// fn take_owner_ship(s:String)-> String{ 
+// fn take_owner_ship(s:String)-> String{
 //     s
 
 // }
@@ -142,13 +141,13 @@
 // fn main (){
 //     let s = give_owner_ship();
 //     println!("{}",s);
-     
+
 // }
 // fn give_owner_ship()-> String{
 //     let s:String= String::from("hello world");
 //     let _s: &[u8] = s.as_bytes();
 //      s
-   
+
 // }
 //  fn main (){
 //     let x: (i32, i32, (), &str)= (1,2,(),"hello world");
@@ -157,7 +156,6 @@
 
 //  }
 //mutabilty can be changed when ownership is transfered
-
 
 // fn main (){
 //    let s1:String=String::from ("hello,");
@@ -168,11 +166,30 @@
 
 // }
 //asigning values as to the heap memory directly
-fn main(){
-  let x:Box<i32>=Box::new(5);
-  let mut y:Box <i32>=Box::new(1);
-    *y=4;
-    assert!(*x==5);
-    println!("success {},{},{}",y,*x,*y-*x);
+// fn main(){
+//   let x:Box<i32>=Box::new(5);
+//   let mut y:Box <i32>=Box::new(1);
+//     *y=4;
+//     assert!(*x==5);
+//     println!("success {},{},{}",y,*x,*y-*x);
 
+// }
+// //ownership in struct
+// fn main() {
+//     struct Person {
+//         name: String,
+//         age: Box<u8>,
+//     }
+//     let person: Person = Person {
+//         name: String::from("Glen Ayienda"),
+//         age: Box::new(20),
+//     };
+//     let Person { name, ref age } = person;
+//      println!("My name is {},I am {} years old",name,age);
+//      println!("My name is {},I am {} years old",name,person.age);
+// }
+fn main (){
+  let t:(String,String)=(String::from("hello"),String::from("world"));
+  let _s=t.0;
+  println!("{}",t.1);
 }
