@@ -194,11 +194,21 @@
 //   println!("{}",t.1);
 // }
 //Borrowing
+// fn main (){
+//   let s1: String="hello".to_string();
+//   let length: usize=caluculate_length(&s1);
+//   println!("the length of {} is {}",s1,length)
+// }
+// fn caluculate_length(s:&String)->usize{
+//   s.len()
+// }
+//mutable reference 
 fn main (){
-  let s1: String="hello".to_string();
-  let length: usize=caluculate_length(&s1);
-  println!("the length of {} is {}",s1,length)
+  let mut s: String=String::from("hello");
+  change(&mut s);
+println!("{}",s);
 }
-fn caluculate_length(s:&String)->usize{
-  s.len()
+fn change(some_string:&mut String)->(){
+  some_string.push_str(",world")
+
 }
