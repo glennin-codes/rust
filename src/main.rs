@@ -159,11 +159,20 @@
 //mutabilty can be changed when ownership is transfered
 
 
-fn main (){
-   let s1:String=String::from ("hello,");
- let mut s2:String=s1;
- s2.push_str("world");
- s2.push_str(" glen");
- println!("{}",s2);
+// fn main (){
+//    let s1:String=String::from ("hello,");
+//  let mut s2:String=s1;
+//  s2.push_str("world");
+//  s2.push_str(" glen");
+//  println!("{}",s2);
+
+// }
+//asigning values as to the heap memory directly
+fn main(){
+  let x:Box<i32>=Box::new(5);
+  let mut y:Box <i32>=Box::new(1);
+    *y=4;
+    assert!(*x==5);
+    println!("success {},{},{}",y,*x,*y-*x);
 
 }
