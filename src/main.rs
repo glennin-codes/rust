@@ -224,12 +224,18 @@
 
 // }
  //function no dangle
- fn no_dangle()-> String{
-  let s1:String=String::from("hello  world");
-  s1
- }
-fn main (){
-  let reference: String= no_dangle();
-  println!("{}",reference);
+//  fn no_dangle()-> String{
+//   let s1:String=String::from("hello  world");
+//   s1
+//  }
+// fn main (){
+//   let reference: String= no_dangle();
+//   println!("{}",reference);
 
-}
+// }
+//Reference
+ fn main(){
+  let x: i32=5;
+  let p: &i32=&x;
+  println!("the memory of x is {:p}",p)
+ }
