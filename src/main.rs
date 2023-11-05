@@ -234,8 +234,11 @@
 
 // }
 //Reference
- fn main(){
-  let x: i32=5;
-  let p: &i32=&x;
-  println!("the memory of x is {:p}",p)
- }
+// 
+fn main (){
+    let mut s:String=String::from("hello");
+    s.push(',');
+    s.push_str(" world");
+    s += "!";
+    println!("{}",s);
+}
