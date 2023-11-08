@@ -261,19 +261,27 @@
 //     assert_eq!(s1,"I like cats");
 //     println!("success");
 // }
-extern crate chrono;
+// extern crate chrono;
 
-use chrono::DateTime;
+// use chrono::DateTime;
 
-fn main() {
-    let timestamp = "2023-11-06T06:52:56.773Z";
-    match DateTime::parse_from_rfc3339(timestamp) {
-        Ok(parsed_date) => {
-            println!("Parsed timestamp: {}", parsed_date);
-        },
-        Err(e) => {
-            eprintln!("Error parsing timestamp: {}", e);
-        }
-    }
+// fn main() {
+//     let timestamp = "2023-11-06T06:52:56.773Z";
+//     match DateTime::parse_from_rfc3339(timestamp) {
+//         Ok(parsed_date) => {
+//             println!("Parsed timestamp: {}", parsed_date);
+//         },
+//         Err(e) => {
+//             eprintln!("Error parsing timestamp: {}", e);
+//         }
+//     }
+// }
+
+//concatination with a string
+fn main (){
+    let s1:String=String::from("hello,");
+    let s2:String=String::from("world");
+    let s3: String=s1+&s2;
+    assert_eq!(s3,"hello,world");
+    println!("{}",s3);
 }
-
