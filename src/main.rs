@@ -302,8 +302,14 @@
 //     let _s1:&str=&s;
 //     println!("Success!");
 // }
-fn main (){
-    for c in "my love for rust is out standing".chars(){
-        println!("{}",c);
-    }
+// fn main (){
+//     for c in "my love for rust is out standing".chars(){
+//         println!("{}",c);
+//     }
+// }
+//arrays
+fn main(){
+    let arr: [i32; 5]=[2,3,4,5,6];
+    assert!(arr.len()==5);
+    println!("Success");
 }
