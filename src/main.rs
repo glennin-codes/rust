@@ -202,7 +202,7 @@
 // fn caluculate_length(s:&String)->usize{
 //   s.len()
 // }
-// //mutable reference 
+// //mutable reference
 // fn main (){
 //   let mut s: String=String::from("hello");
 //   change(  &mut s);
@@ -212,7 +212,7 @@
 //   some_string.push_str(",world")
 
 // }
-//dangling function reference 
+//dangling function reference
 // fn main (){
 //   let reference= dangle();
 //   println!("{}",reference);
@@ -223,7 +223,7 @@
 //   &s1
 
 // }
- //function no dangle
+//function no dangle
 //  fn no_dangle()-> String{
 //   let s1:String=String::from("hello  world");
 //   s1
@@ -234,7 +234,7 @@
 
 // }
 //Reference
-// // 
+// //
 // fn main (){
 //     let mut s:String=String::from("hello");
 //     s.push(',');
@@ -324,5 +324,21 @@
 //     let slice:&[char]=&arr[1..2];
 //     println!("{:?}",slice);
 
-
 // }
+// fn main() {
+//     let arr: [&str; 12] = [
+//         "Terminal", "will", "be", "reused", "by", "tasks", "press", " any", "key", "to", "close",
+//         "it. "
+//     ];
+//     println!("{}",std::mem::size_of_val(&arr));
+//     println!("{}",std::mem::size_of_val(&arr)/arr.len());
+//     let s: &str="hello,world hjhsdb";
+//     println!("{}",std::mem::size_of_val(&s));
+// }
+fn main(){
+    let arr=['a','b','c','d','f','g','h'];
+    let slice:&[char] =&arr[..2];
+    println!("{}",std::mem::size_of_val(&slice));
+    println!("{:?}",slice.len());
+
+}
