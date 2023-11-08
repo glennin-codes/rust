@@ -313,9 +313,16 @@
 //     assert!(arr.len()==5);
 //     println!("Success");
 // }\
-fn main (){
-    let arr: [char; 7] =['a','b','c','d','f','g','h'];
-    println!("{}",std::mem::size_of_val(&arr));
-   assert_eq!(std::mem::size_of_val(&arr),28);
-   print!("success");
-}
+// fn main (){
+//     let arr: [char; 7] =['a','b','c','d','f','g','h'];
+//     println!("{}",std::mem::size_of_val(&arr));
+//    assert_eq!(std::mem::size_of_val(&arr),28);
+//    print!("success");
+// }
+// fn main (){
+//     let arr:[char;7]=['a','b','c','d','f','g','h'];
+//     let slice:&[char]=&arr[1..2];
+//     println!("{:?}",slice);
+
+
+// }
