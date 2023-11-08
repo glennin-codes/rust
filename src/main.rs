@@ -308,8 +308,14 @@
 //     }
 // }
 //arrays
-fn main(){
-    let arr: [i32; 5]=[2,3,4,5,6];
-    assert!(arr.len()==5);
-    println!("Success");
+// fn main(){
+//     let arr: [i32; 5]=[2,3,4,5,6];
+//     assert!(arr.len()==5);
+//     println!("Success");
+// }\
+fn main (){
+    let arr: [char; 7] =['a','b','c','d','f','g','h'];
+    println!("{}",std::mem::size_of_val(&arr));
+   assert_eq!(std::mem::size_of_val(&arr),28);
+   print!("success");
 }
