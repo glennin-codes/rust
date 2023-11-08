@@ -285,14 +285,20 @@
 //     assert_eq!(s3,"hello,world");
 //     println!("{}",s3);
 // }
-//converting &str to a String
-fn main(){
-    let s:&str="hello,world";
-    // greetings(s.to_string())
-    // or
-    greetings(String::from(s))
+// //converting &str to a String
+// fn main(){
+//     let s:&str="hello,world";
+//     // greetings(s.to_string())
+//     // or
+//     greetings(String::from(s))
 
-}
-fn greetings(s:String){
-    println!("{}",s)
+// }
+// fn greetings(s:String){
+//     println!("{}",s)
+// }
+
+fn main (){
+    let s:String="hello, world".to_string();
+    let _s1:&str=&s;
+    println!("Success!");
 }
