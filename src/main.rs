@@ -342,9 +342,28 @@
 //     println!("{:?}",slice.len());
 
 // }
+// fn main (){
+//     let arr :[i32;5]=[1,2,3,4,5];
+//     let slice:&[i32] = &arr[1..4];
+//     assert_eq!(slice,&[2,3,4]);
+//     println!("success :{:?}",slice)
+// }println!("{}",slice1);
+// fn main (){
+//     let s =String::from("hello");
+//     let slice1=&s[0..2];
+//     println!("{}",slice1);
+//     let slice2=&s[..2];
+//     assert_eq!(slice1,slice2);
+//     println!("Success!");
+
+// }
 fn main (){
-    let arr :[i32;5]=[1,2,3,4,5];
-    let slice:&[i32] = &arr[1..4];
-    assert_eq!(slice,&[2,3,4]);
-    println!("success :{:?}",slice)
+    let mut s:String=String::from("hello,world");
+    let word=first_word(&s);
+    println!("the first word is:{}",word); 
+    s.clear();
+  
+}
+fn first_word(s:&str)->&str{
+    &s[..1]
 }
