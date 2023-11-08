@@ -357,13 +357,34 @@
 //     println!("Success!");
 
 // }
-fn main (){
-    let mut s:String=String::from("hello,world");
-    let word=first_word(&s);
-    println!("the first word is:{}",word); 
-    s.clear();
-  
+// fn main (){
+//     let mut s:String=String::from("hello,world");
+//     let word=first_word(&s);
+//     println!("the first word is:{}",word);
+//     s.clear();
+
+// }
+// fn first_word(s:&str)->&str{
+//     &s[..1]
+// }
+
+//Structs
+#[allow(dead_code)]
+#[derive(Debug)]
+struct Person {
+    name: String,
+    age: u8,
+    hobby: String,
 }
-fn first_word(s:&str)->&str{
-    &s[..1]
+fn main() {
+    let user: Person = Person {
+        name: String::from("Glen Ayienda"),
+        age: 35,
+        hobby: String::from("coding and playing video games")
+    };
+
+    println!(
+        "name:{}\n age:{}\n hobby:{}\n",
+        user.name, user.age, user.hobby
+    );
 }
