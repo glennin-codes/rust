@@ -297,8 +297,13 @@
 //     println!("{}",s)
 // }
 
+// fn main (){
+//     let s:String="hello, world".to_string();
+//     let _s1:&str=&s;
+//     println!("Success!");
+// }
 fn main (){
-    let s:String="hello, world".to_string();
-    let _s1:&str=&s;
-    println!("Success!");
+    for c in "my love for rust is out standing".chars(){
+        println!("{}",c);
+    }
 }
