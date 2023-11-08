@@ -335,10 +335,16 @@
 //     let s: &str="hello,world hjhsdb";
 //     println!("{}",std::mem::size_of_val(&s));
 // }
-fn main(){
-    let arr=['a','b','c','d','f','g','h'];
-    let slice:&[char] =&arr[..2];
-    println!("{}",std::mem::size_of_val(&slice));
-    println!("{:?}",slice.len());
+// fn main(){
+//     let arr=['a','b','c','d','f','g','h'];
+//     let slice:&[char] =&arr[..2];
+//     println!("{}",std::mem::size_of_val(&slice));
+//     println!("{:?}",slice.len());
 
+// }
+fn main (){
+    let arr :[i32;5]=[1,2,3,4,5];
+    let slice:&[i32] = &arr[1..4];
+    assert_eq!(slice,&[2,3,4]);
+    println!("success :{:?}",slice)
 }
