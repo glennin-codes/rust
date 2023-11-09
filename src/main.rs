@@ -426,21 +426,41 @@
 // }
 
 //struct for tuple
+// #[allow(dead_code)]
+// #[derive(Debug)]
+// struct Color(i32,i32,i32);
+// fn main(){
+//     let background_color:Color=Color(3,9,02);
+//     check_color(background_color);
+//     println!("Success");
+
+// }
+// fn check_color(c:Color){
+//     let Color(x,y,z)=c;
+
+//     assert_eq!(y,9);
+//     assert_eq!(z,02);
+//     assert_eq!(x,3);
+//     println!("{}",c.0);
+
+// }
 #[allow(dead_code)]
 #[derive(Debug)]
-struct Color(i32,i32,i32);
+struct Person{
+    name:String,
+    age:u8
+}
 fn main(){
-    let background_color:Color=Color(3,9,02);
-    check_color(background_color);
-    println!("Success");
+    let p:Person=helper(String::from("James Otiso"),32);
+    println!("{:?}",p);
+    println!("Success!");
 
 }
-fn check_color(c:Color){
-    let Color(x,y,z)=c;
-
-    assert_eq!(y,9);
-    assert_eq!(z,02);
-    assert_eq!(x,3);
-    println!("{}",c.0);
+fn helper(name:String,age:u8)->Person{
+    let p:Person=Person{
+        name,
+        age
+    };
+    p
 
 }
