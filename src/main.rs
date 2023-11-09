@@ -407,7 +407,6 @@
 // struct Person {
 //     name: String,
 //     age: u8,
-  
 
 // }
 // fn main(){
@@ -419,7 +418,7 @@
 //  p.name=String::from("jmaes tyson");
 //  p.age=43;
 //  let Person{name,age}=p;
- 
+
 //  println!("name:{}\n age:{}",name,age);
 
 //  println!("name:{}\n age:{}",name,age);
@@ -444,23 +443,51 @@
 //     println!("{}",c.0);
 
 // }
-#[allow(dead_code)]
+// #[allow(dead_code)]
+// #[derive(Debug)]
+// struct Person{
+//     name:String,
+//     age:u8
+// }
+// fn main(){
+//     let p:Person=helper(String::from("James Otiso"),32);
+//     println!("{:?}",p);
+//     println!("Success!");
+
+// }
+// fn helper(name:String,age:u8)->Person{
+//     let p:Person=Person{
+//         name,
+//         age
+//     };
+//     p
+
+// }
+//resusabilty of structs preventing repetitions
 #[derive(Debug)]
-struct Person{
-    name:String,
-    age:u8
+#[allow(dead_code)]
+struct User {
+    username: String,
+    active: bool,
+    sign_in_count: u64,
+    email: String,
 }
-fn main(){
-    let p:Person=helper(String::from("James Otiso"),32);
-    println!("{:?}",p);
-    println!("Success!");
-
-}
-fn helper(name:String,age:u8)->Person{
-    let p:Person=Person{
-        name,
-        age
+fn main() {
+    let user1: User = User {
+        username: String::from("james Tyson"),
+        email: String::from("jamesTyson@gmail.com"),
+        active: true,
+        sign_in_count: 1,
     };
-    p
-
+    println!("user1={:?}\n",user1);
+    let user2: User=set_email(user1);
+   
+    println!("user2={:?}\n",user2);
+    println!("success!");
+}
+fn set_email(u:User ) ->User {
+    User {
+        email: String::from("homes@gmail.com"),
+        ..u
+    }
 }
