@@ -369,22 +369,58 @@
 // }
 
 //Structs
+// #[allow(dead_code)]
+// #[allow(unused_variables)]
+// #[derive(Debug)]
+// struct Person {
+//     name: String,
+//     age: u8,
+//     hobby: String,
+// }
+// fn main() {
+//     let user: Person = Person {
+//         name: String::from("Glen Ayienda"),
+//         age: 35,
+//         hobby: String::from("coding and playing video games")
+//     };
+
+//     println!(
+//         "name:{}\n age:{}\n hobby:{}\n",
+//         user.name, user.age, user.hobby
+//     );
+// }
+// #[allow(unused_variables)]
+// fn main(){
+
+//     let age:u8=30;
+//     let p: Person=Person{
+//         name:"Alice johnson".to_string(),
+//         age,
+//         hobby:"dancing".to_string()
+//     };
+//     println!("Success!")
+// }
+
 #[allow(dead_code)]
+#[allow(unused_variables)]
 #[derive(Debug)]
 struct Person {
     name: String,
     age: u8,
-    hobby: String,
-}
-fn main() {
-    let user: Person = Person {
-        name: String::from("Glen Ayienda"),
-        age: 35,
-        hobby: String::from("coding and playing video games")
-    };
+  
 
-    println!(
-        "name:{}\n age:{}\n hobby:{}\n",
-        user.name, user.age, user.hobby
-    );
+}
+fn main(){
+ let age: u8=32;
+ let mut p =Person{
+    name:String::from("glen ayienda"),
+    age
+ };
+ p.name=String::from("jmaes tyson");
+ p.age=43;
+ let Person{name,age}=p;
+ 
+ println!("name:{}\n age:{}",name,age);
+
+ println!("name:{}\n age:{}",name,age);
 }
