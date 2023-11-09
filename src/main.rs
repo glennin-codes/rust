@@ -198,7 +198,7 @@
 //   let s1: String="hello".to_string();
 //   let length: usize=caluculate_length(&s1);
 //   println!("the length of {} is {}",s1,length)
-// }
+// }git commit -m Merge branch 'master' of https://github.com/glennin-codes/rust"
 // fn caluculate_length(s:&String)->usize{
 //   s.len()
 // }
@@ -235,13 +235,13 @@
 // }
 //Reference
 // 
-fn main (){
-    let mut s:String=String::from("hello");
-    s.push(',');
-    s.push_str(" world");
-    s += "!";
-    println!("{}",s);
-}// mod helper;
+// fn main (){
+//     let mut s:String=String::from("hello");
+//     s.push(',');
+//     s.push_str(" world");
+//     s += "!";
+//     println!("{}",s);
+// }// mod helper;
 
 // use helper::starter::multiply;
 
