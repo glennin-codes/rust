@@ -401,26 +401,46 @@
 //     println!("Success!")
 // }
 
-#[allow(dead_code)]
-#[allow(unused_variables)]
-#[derive(Debug)]
-struct Person {
-    name: String,
-    age: u8,
+// #[allow(dead_code)]
+// #[allow(unused_variables)]
+// #[derive(Debug)]
+// struct Person {
+//     name: String,
+//     age: u8,
   
 
-}
-fn main(){
- let age: u8=32;
- let mut p =Person{
-    name:String::from("glen ayienda"),
-    age
- };
- p.name=String::from("jmaes tyson");
- p.age=43;
- let Person{name,age}=p;
+// }
+// fn main(){
+//  let age: u8=32;
+//  let mut p =Person{
+//     name:String::from("glen ayienda"),
+//     age
+//  };
+//  p.name=String::from("jmaes tyson");
+//  p.age=43;
+//  let Person{name,age}=p;
  
- println!("name:{}\n age:{}",name,age);
+//  println!("name:{}\n age:{}",name,age);
 
- println!("name:{}\n age:{}",name,age);
+//  println!("name:{}\n age:{}",name,age);
+// }
+
+//struct for tuple
+#[allow(dead_code)]
+#[derive(Debug)]
+struct Color(i32,i32,i32);
+fn main(){
+    let background_color:Color=Color(3,9,02);
+    check_color(background_color);
+    println!("Success");
+
+}
+fn check_color(c:Color){
+    let Color(x,y,z)=c;
+
+    assert_eq!(y,9);
+    assert_eq!(z,02);
+    assert_eq!(x,3);
+    println!("{}",c.0);
+
 }
