@@ -463,7 +463,7 @@
 //     p
 
 // }
-//resusabilty of structs preventing repetitions
+//using field init shorthand syntax to reduce repetions
 #[derive(Debug)]
 #[allow(dead_code)]
 struct User {
