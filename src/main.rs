@@ -778,12 +778,26 @@ enum Message{
     Write(String),
     ChangeColor(i32,i32,u8)
 }
+// }
+// fn main(){
+//     let msg:Message=Message::Move { x: 5, y: 5 };
+//     if let Message::Move { x, y }=msg{
+//         assert_eq!(x,y)
+//     }else{
+//         panic!("not a move command");
+//     }
+//     println!("Success!")
+// }
 fn main(){
-    let msg:Message=Message::Move { x: 5, y: 5 };
-    if let Message::Move { x, y }=msg{
-        assert_eq!(x,y)
-    }else{
-        panic!("not a move command");
+    let msgs:[Message;3]=[
+        Message::Move { x: 3, y: 3 },
+        Message::ChangeColor(223, 220, 0),
+        Message::Quit
+    ];
+    for msg in msgs{
+        show_message(msg);
     }
-    println!("Success!")
+}
+fn show_message(msg:Message){
+    println!("{:?}",msg);
 }
