@@ -707,30 +707,45 @@
 
 // }
 //using field init shorthand syntax to reduce repetions
-#[derive(Debug)]
-#[allow(dead_code)]
-struct User {
-    username: String,
-    active: bool,
-    sign_in_count: u64,
-    email: String,
-}
-fn main() {
-    let user1: User = User {
-        username: String::from("james Tyson"),
-        email: String::from("jamesTyson@gmail.com"),
-        active: true,
-        sign_in_count: 1,
-    };
-    println!("user1={:?}\n",user1);
-    let user2: User=set_email(user1);
+// #[derive(Debug)]
+// #[allow(dead_code)]
+// struct User {
+//     username: String,
+//     active: bool,
+//     sign_in_count: u64,
+//     email: String,
+// }
+// fn main() {
+//     let user1: User = User {
+//         username: String::from("james Tyson"),
+//         email: String::from("jamesTyson@gmail.com"),
+//         active: true,
+//         sign_in_count: 1,
+//     };
+//     println!("user1={:?}\n",user1);
+//     let user2: User=set_email(user1);
    
-    println!("user2={:?}\n",user2);
-    println!("success!");
+//     println!("user2={:?}\n",user2);
+//     println!("success!");
+// }
+// fn set_email(u:User ) ->User {
+//     User {
+//         email: String::from("homes@gmail.com"),
+//         ..u
+//     }
+// }
+//enums
+//way of defining a type with only one possible set of value
+#[derive(Debug)]
+
+enum IpAddres{
+    V4(String),
+    V6(String)
 }
-fn set_email(u:User ) ->User {
-    User {
-        email: String::from("homes@gmail.com"),
-        ..u
-    }
+
+fn main(){
+    let home:IpAddres=IpAddres::V4(String::from("127.0.0.1"));
+    let loopback:IpAddres=IpAddres::V6(String::from("::1"));
+    println!("home={:?}\n loopback={:?}",home,loopback);
+
 }
