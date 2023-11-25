@@ -788,16 +788,28 @@ enum Message{
 //     }
 //     println!("Success!")
 // }
-fn main(){
-    let msgs:[Message;3]=[
-        Message::Move { x: 3, y: 3 },
-        Message::ChangeColor(223, 220, 0),
-        Message::Quit
-    ];
-    for msg in msgs{
-        show_message(msg);
-    }
-}
-fn show_message(msg:Message){
-    println!("{:?}",msg);
-}
+// fn main(){
+//     let msgs:[Message;3]=[
+//         Message::Move { x: 3, y: 3 },
+//         Message::ChangeColor(223, 220, 0),
+//         Message::Quit
+//     ];
+//     for msg in msgs{
+//         show_message(msg);
+//     }
+// }
+// fn show_message(msg:Message){
+//     println!("{:?}",msg);
+// }
+
+//if let
+// fn main(){
+//     let favourite_color:Option<&str>=Some("red");
+
+// if let Some(color)=favourite_color{
+//     println!("favourite color is {}",color);
+// }else {
+//     println!("I don't have a favorite color");
+// }
+
+// }
