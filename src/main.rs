@@ -747,6 +747,7 @@
 //     let loopback:IpAddres=IpAddres::V6(String::from("::1"));
 //     println!("home={:?}\n loopback={:?}",home,loopback);
 
+
 // }
 //an enum can hold different dataTypes
 // #[derive(Debug)]
@@ -813,3 +814,24 @@ enum Message{
 // }
 
 // }
+
+
+   
+         
+                fn parse_input(input: &str) -> Result<i32, std::num::ParseIntError> {
+                    match input {
+                        "add" => Ok(1),
+                        "subtract" => Ok(2),
+                        "multiply" => Ok(3),
+                        "divide" => Ok(4),
+                        _ => panic!("Invalid input"),
+                    }
+                }
+            
+   
+
+fn main() {
+    let input = "divide";
+    let operation = parse_input(input).unwrap();
+    println!("Operation: {}", operation);
+}
