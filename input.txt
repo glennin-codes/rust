@@ -1,0 +1,48 @@
+Processing data from a file: A while loop can be used to read data from a file line by line and perform operations on each line. For example, consider a program that reads a text file and counts the number of words:
+Rust
+fn main() {
+    let mut word_count = 0;
+
+    let file = File::open("input.txt").unwrap();
+    let reader = BufReader::new(file);
+
+    for line in reader.lines() {
+        let line = line.unwrap();
+        let words = line.split_whitespace().count();
+        word_count += words;
+    }
+
+    println!("Total words: {}", word_count);
+}
+Processing data from a file: A while loop can be used to read data from a file line by line and perform operations on each line. For example, consider a program that reads a text file and counts the number of words:
+Rust
+fn main() {
+    let mut word_count = 0;
+
+    let file = File::open("input.txt").unwrap();
+    let reader = BufReader::new(file);
+
+    for line in reader.lines() {
+        let line = line.unwrap();
+        let words = line.split_whitespace().count();
+        word_count += words;
+    }
+
+    println!("Total words: {}", word_count);
+}
+Processing data from a file: A while loop can be used to read data from a file line by line and perform operations on each line. For example, consider a program that reads a text file and counts the number of words:
+Rust
+fn main() {
+    let mut word_count = 0;
+
+    let file = File::open("input.txt").unwrap();
+    let reader = BufReader::new(file);
+
+    for line in reader.lines() {
+        let line = line.unwrap();
+        let words = line.split_whitespace().count();
+        word_count += words;
+    }
+
+    println!("Total words: {}", word_count);
+}

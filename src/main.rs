@@ -747,7 +747,11 @@
 //     let loopback:IpAddres=IpAddres::V6(String::from("::1"));
 //     println!("home={:?}\n loopback={:?}",home,loopback);
 
-use core::panic;
+// use core::panic;
+
+// use std::io;
+
+// use std::io::BufReader;
 
 
 // }
@@ -851,21 +855,112 @@ enum Message{
 // }
 
 
-fn main(){
-    let five:Option <i32>=Some(5);
-    let six:Option <i32>= plus_one(five);
-    let _none=plus_one(None);
-    if let Some(n)=six{
-        println!("{:?}",n);
-    }else{
-        panic!("NEVER LET THIS RUN");
-    }
+// fn main(){
+//     let five:Option <i32>=Some(5);
+//     let six:Option <i32>= plus_one(five);
+//     let _none=plus_one(None);
+//     if let Some(n)=six{
+//         println!("{:?}",n);
+//     }else{
+//         panic!("NEVER LET THIS RUN");
+//     }
    
-}
-fn plus_one(x: Option<i32>)->Option<i32>{
-match x{
-    None=>None,
-    Some(i)=>Some(i+1),
+// }
+// fn plus_one(x: Option<i32>)->Option<i32>{
+// match x{
+//     None=>None,
+//     Some(i)=>Some(i+1),
 
-}
-}
+// }
+// }
+// //for 
+// fn main(){
+//     let v:Vec<i32>=vec![1,2,3,4,58];
+//     for i in v{
+       
+//         println!(
+//             "{}",i
+//         )
+
+//     }
+// println!("{:?}",v)
+// }
+
+// fn main(){
+//     let numbers:[i32;5]=[8,3,42,31,29];
+//     for n in numbers{
+//         println!("{}",n);
+        
+//     }
+//     println!("{:?}",numbers)
+// }
+//while loop
+// fn main() {
+//     let mut age = String::new();
+
+//     while age.is_empty() || !age.parse::<i32>().is_ok() {
+//         println!("Enter your age:");
+//         io::stdin().read_line(&mut age).unwrap();
+//     }
+
+//     let age: i32 = age.parse().unwrap();
+//     println!("Your age is: {}", age);
+// }
+// fn main() {
+//     let mut word_count = 0;
+
+//     let file = std::fs::File::open("input.txt").unwrap();
+//     let reader = BufReader::new(file);
+
+//     for line in std::io::BufRead::lines(reader) {
+//         let mut line = line.unwrap();
+//         let words = &line.split_whitespace().count();
+//         println!("{}",line);
+//         word_count += words;
+//     }
+
+//     println!("Total words: {}", word_count);
+// }
+// fn main(){
+//     let mut n:i32=0;
+//     for _i in 0..=100{
+//         if n==66{
+//             break;
+//         }
+//         println!("{}",n);
+//         n+=1;
+//     }
+//     println!("success")
+// }
+// fn main(){
+//     let mut n:i32=0;
+//     for _i in 0..100{
+//         if n != 66{
+//             n+=1;
+//             continue;
+//         }
+       
+//         break;
+
+//     }
+//     println!("{}",n);
+// }
+// fn main(){
+//     let mut count: u32=0u32;
+//     loop {
+//         count+=1;
+//         if count == 3{
+//             println!("three");
+//             continue;
+//         }
+        
+
+//         if count == 5{
+//             println!("Ok thats enough");
+//             break;
+//         }
+//         println!("count is {}",count);
+      
+
+//     }
+// }
