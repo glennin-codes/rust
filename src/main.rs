@@ -707,30 +707,165 @@
 
 // }
 //using field init shorthand syntax to reduce repetions
+// #[derive(Debug)]
+// #[allow(dead_code)]
+// struct User {
+//     username: String,
+//     active: bool,
+//     sign_in_count: u64,
+//     email: String,
+// }
+// fn main() {
+//     let user1: User = User {
+//         username: String::from("james Tyson"),
+//         email: String::from("jamesTyson@gmail.com"),
+//         active: true,
+//         sign_in_count: 1,
+//     };
+//     println!("user1={:?}\n",user1);
+//     let user2: User=set_email(user1);
+   
+//     println!("user2={:?}\n",user2);
+//     println!("success!");
+// }
+// fn set_email(u:User ) ->User {
+//     User {
+//         email: String::from("homes@gmail.com"),
+//         ..u
+//     }
+// }
+//enums
+//way of defining a type with only one possible set of value
+
+// enum IpAddres{
+//     V4(String),
+//     V6(String)
+// }
+
+// fn main(){
+//     let home:IpAddres=IpAddres::V4(String::from("127.0.0.1"));
+//     let loopback:IpAddres=IpAddres::V6(String::from("::1"));
+//     println!("home={:?}\n loopback={:?}",home,loopback);
+
+use core::panic;
+
+
+// }
+//an enum can hold different dataTypes
+// #[derive(Debug)]
+// #[allow(dead_code)]
+// enum Message{
+//     Quit,
+//     Move{x:i32,y:i32},
+//     Write(String),
+//     ChangeColor(i32,i32,u8)
+// }
+// fn main(){
+//     let m1:Message=Message::ChangeColor(23, 20, 3);
+//     let m3:Message=Message::Move { x: 3, y: 3 };
+//     let message:Message=Message::Write("I love My work".to_string());
+//     println!(
+//         "
+//         {:?}\n
+//         {:?}\n
+//         {:?}\n
+//         ",m1,m3,message
+//     );
+// }
 #[derive(Debug)]
 #[allow(dead_code)]
-struct User {
-    username: String,
-    active: bool,
-    sign_in_count: u64,
-    email: String,
+
+enum Message{
+    Quit,
+    Move{x:i32,y:i32},
+    Write(String),
+    ChangeColor(i32,i32,u8)
 }
-fn main() {
-    let user1: User = User {
-        username: String::from("james Tyson"),
-        email: String::from("jamesTyson@gmail.com"),
-        active: true,
-        sign_in_count: 1,
-    };
-    println!("user1={:?}\n",user1);
-    let user2: User=set_email(user1);
+// }
+// fn main(){
+//     let msg:Message=Message::Move { x: 5, y: 5 };
+//     if let Message::Move { x, y }=msg{
+//         assert_eq!(x,y)
+//     }else{
+//         panic!("not a move command");
+//     }
+//     println!("Success!")
+// }
+// fn main(){
+//     let msgs:[Message;3]=[
+//         Message::Move { x: 3, y: 3 },
+//         Message::ChangeColor(223, 220, 0),
+//         Message::Quit
+//     ];
+//     for msg in msgs{
+//         show_message(msg);
+//     }
+// }
+// fn show_message(msg:Message){
+//     println!("{:?}",msg);
+// }
+
+//if let
+// fn main(){
+//     let favourite_color:Option<&str>=Some("red");
+
+// if let Some(color)=favourite_color{
+//     println!("favourite color is {}",color);
+// }else {
+//     println!("I don't have a favorite color");
+// }
+
+// }
+
+
    
-    println!("user2={:?}\n",user2);
-    println!("success!");
-}
-fn set_email(u:User ) ->User {
-    User {
-        email: String::from("homes@gmail.com"),
-        ..u
+         
+//                 fn parse_input(input: &str) -> Result<i32, std::num::ParseIntError> {
+//                     match input {
+//                         "add" => Ok(1),
+//                         "subtract" => Ok(2),
+//                         "multiply" => Ok(3),
+//                         "divide" => Ok(4),
+//                         _ => panic!("Invalid input"),
+//                     }
+//                 }
+            
+   
+
+// fn main() {
+//     let input = "divide";
+//     let operation = parse_input(input).unwrap();
+//     println!("Operation: {}", operation);
+// }
+// const  NUMBER:i32 = 5;
+
+// fn main(){
+//     match NUMBER {
+//         5 if NUMBER % 2 == 0 => println!("The number is five and even"),
+//         5   => println!("The number is five"),
+//         _ => println!("The number is something else"),
+//     }
+   
+   
+    
+// }
+
+
+fn main(){
+    let five:Option <i32>=Some(5);
+    let six:Option <i32>= plus_one(five);
+    let _none=plus_one(None);
+    if let Some(n)=six{
+        println!("{:?}",n);
+    }else{
+        panic!("NEVER LET THIS RUN");
     }
+   
+}
+fn plus_one(x: Option<i32>)->Option<i32>{
+match x{
+    None=>None,
+    Some(i)=>Some(i+1),
+
+}
 }
