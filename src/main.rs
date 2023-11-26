@@ -818,20 +818,32 @@ enum Message{
 
    
          
-                fn parse_input(input: &str) -> Result<i32, std::num::ParseIntError> {
-                    match input {
-                        "add" => Ok(1),
-                        "subtract" => Ok(2),
-                        "multiply" => Ok(3),
-                        "divide" => Ok(4),
-                        _ => panic!("Invalid input"),
-                    }
-                }
+//                 fn parse_input(input: &str) -> Result<i32, std::num::ParseIntError> {
+//                     match input {
+//                         "add" => Ok(1),
+//                         "subtract" => Ok(2),
+//                         "multiply" => Ok(3),
+//                         "divide" => Ok(4),
+//                         _ => panic!("Invalid input"),
+//                     }
+//                 }
             
    
 
-fn main() {
-    let input = "divide";
-    let operation = parse_input(input).unwrap();
-    println!("Operation: {}", operation);
+// fn main() {
+//     let input = "divide";
+//     let operation = parse_input(input).unwrap();
+//     println!("Operation: {}", operation);
+// }
+const  NUMBER:i32 = 5;
+
+fn main(){
+    match NUMBER {
+        5 if NUMBER % 2 == 0 => println!("The number is five and even"),
+        5   => println!("The number is five"),
+        _ => println!("The number is something else"),
+    }
+   
+   
+    
 }
