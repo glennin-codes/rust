@@ -747,6 +747,8 @@
 //     let loopback:IpAddres=IpAddres::V6(String::from("::1"));
 //     println!("home={:?}\n loopback={:?}",home,loopback);
 
+use core::panic;
+
 
 // }
 //an enum can hold different dataTypes
@@ -835,15 +837,35 @@ enum Message{
 //     let operation = parse_input(input).unwrap();
 //     println!("Operation: {}", operation);
 // }
-const  NUMBER:i32 = 5;
+// const  NUMBER:i32 = 5;
 
-fn main(){
-    match NUMBER {
-        5 if NUMBER % 2 == 0 => println!("The number is five and even"),
-        5   => println!("The number is five"),
-        _ => println!("The number is something else"),
-    }
+// fn main(){
+//     match NUMBER {
+//         5 if NUMBER % 2 == 0 => println!("The number is five and even"),
+//         5   => println!("The number is five"),
+//         _ => println!("The number is something else"),
+//     }
    
    
     
+// }
+
+
+fn main(){
+    let five:Option <i32>=Some(5);
+    let six:Option <i32>= plus_one(five);
+    let _none=plus_one(None);
+    if let Some(n)=six{
+        println!("{:?}",n);
+    }else{
+        panic!("NEVER LET THIS RUN");
+    }
+   
+}
+fn plus_one(x: Option<i32>)->Option<i32>{
+match x{
+    None=>None,
+    Some(i)=>Some(i+1),
+
+}
 }
