@@ -965,24 +965,34 @@ enum Message{
 //     }
 // }
 //infinite looping
-fn main(){
-    let mut count:i32=0;
-    'outer:loop{
-        'inner1:loop{
-                    if count >= 20{
-                        break 'inner1;
-                    }
-                        count+=2;
-        }
-              count+=2;
-        '_inner2:loop{
-                if count >=30{
-                    break 'outer;
-                }
-                continue 'outer;
-        }
+// fn main(){
+//     let mut count:i32=0;
+//     'outer:loop{
+//         'inner1:loop{
+//                     if count >= 20{
+//                         break 'inner1;
+//                     }
+//                         count+=2;
+//         }
+//               count+=2;
+//         '_inner2:loop{
+//                 if count >=30{
+//                     break 'outer;
+//                 }
+//                 continue 'outer;
+//         }
 
+//     }
+//     assert_eq!(count,30);
+//     println!("succes! {}",count);
+// }
+fn main(){
+    let alphabets:[char;7]=['a','b','4','y','f','R','6'];
+    for c in alphabets{
+        match c{
+            'a'..='z'=>println!("{} is a lowercase",c),
+            'A'..='Z'=>println!("{} is a uppercase",c),
+            _=>println!("{} is not an alphabet",c),
+        };
     }
-    assert_eq!(count,30);
-    println!("succes! {}",count);
 }
