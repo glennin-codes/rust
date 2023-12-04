@@ -753,6 +753,8 @@
 
 // use std::io::BufReader;
 
+use core::panic;
+
 
 // }
 //an enum can hold different dataTypes
@@ -987,12 +989,13 @@ enum Message{
 //     println!("succes! {}",count);
 // }
 fn main(){
-    let alphabets:[char;7]=['a','b','4','y','f','R','6'];
-    for c in alphabets{
-        match c{
-            'a'..='z'=>println!("{} is a lowercase",c),
-            'A'..='Z'=>println!("{} is a uppercase",c),
-            _=>println!("{} is not an alphabet",c),
-        };
-    }
+    let alphabets:[char;7]=['a','b','4','y','f','l','6'];
+          for a in alphabets{
+               if matches!(a,'A'..='Z'){
+                println!("success!")
+               }else{
+             
+               }
+          }
+    
 }
